@@ -80,6 +80,10 @@ class DRCArgParser(object):
         return os.path.join(director.getDRCBaseDir(),
                             'software/models/dual_arm_husky_description/director_config.json')
 
+    def getDefaultMobipickConfigFile(self):
+        return os.path.join(director.getDRCBaseDir(),
+                            'software/models/mobipick/director_config.json')
+
     def addDirectorConfigShortcuts(self, directorConfig):
 
         directorConfig.add_argument('-v3', '--atlas_v3', dest='directorConfigFile',
@@ -121,6 +125,11 @@ class DRCArgParser(object):
                             action='store_const',
                             const=self.getDefaultDualArmHuskyConfigFile(),
                             help='Use Dual Arm Husky')
+
+        directorConfig.add_argument('-mobipick', '--mobipick', dest='directorConfigFile',
+                            action='store_const',
+                            const=self.getDefaultMobipickConfigFile(),
+                            help='Use Mobipick')
 
     def addDefaultArgs(self, parser):
 

@@ -5,7 +5,7 @@ find_package(PythonInterp 2.7 REQUIRED)
 find_package(PythonQt REQUIRED)
 find_package(CTKPythonConsole REQUIRED)
 find_package(OpenGL REQUIRED)
-find_package(VTK 7.1 REQUIRED)
+find_package(VTK 6.3 REQUIRED)
 find_package(QtPropertyBrowser REQUIRED)
 
 include(${VTK_USE_FILE})

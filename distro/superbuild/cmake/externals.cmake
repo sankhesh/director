@@ -311,9 +311,9 @@ else()
 
   # Verifies that the system has VTK5.
   find_package(VTK REQUIRED HINTS ${vtk_homebrew_dir})
-  if (NOT ${VTK_VERSION_MAJOR} EQUAL 7)
-    message(FATAL_ERROR "System does not have VTK 7. It has version ${VTK_VERSION}.")
-  endif()
+  #  if (NOT ${VTK_VERSION_MAJOR} EQUAL 7)
+  #    message(FATAL_ERROR "System does not have VTK 7. It has version ${VTK_VERSION}.")
+  #  endif()
 
   set(vtk_args -DVTK_DIR:PATH=${VTK_DIR})
 endif()
